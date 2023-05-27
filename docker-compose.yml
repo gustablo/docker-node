@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  api:
+    build: .
+    container_name: docker-node-api
+    ports:
+      - '3000:3333'
+    volumes:
+      - ./src:/docker-node/src/
+    depends_on:
+      - mongo
+
+  mongo:
+    container_name: docker-mongo
+    image: mongo
+    restart: always
+    volumes:
+      - db:/data/db
+
+volumes:
+  db: {}

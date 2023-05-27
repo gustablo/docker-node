@@ -1,0 +1,17 @@
+{
+  "name": "docker-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon --ignore ./node_modules --watch src -L src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^6.9.0",
+    "nodemon": "^2.0.20"
+  }
+}
